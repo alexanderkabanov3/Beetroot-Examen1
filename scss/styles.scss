@@ -1,0 +1,841 @@
+@import "normilize.scss";
+
+body{
+    padding: 15px;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    max-width: 1113px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.headingh2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 30px 0;
+
+    &--center{
+        text-align: center;
+        padding-bottom: 17px;
+    }
+
+    &--paddingoff{
+        padding: 0;
+    }
+}
+
+.headingh3{
+    font-family: 'Aleo', serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #fff;
+    line-height: 34px;
+
+    &--center{
+        text-align: center;
+ 
+    }
+}
+
+.text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #e8e8e8;
+    line-height: 26px;
+}
+
+
+.buttonother{
+    font-family: 'Aleo', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(84, 116, 253, 0.6);
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+
+    margin-top: 48px;
+    padding: 20px 58px;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s ease;
+    }
+
+    &:focus{
+        background-color: #ff6363;
+        opacity: 1;
+        transition: 0.3s ease;
+    }
+}
+
+.header{
+    background: url(../img/header/headerbg.png) no-repeat center top / cover;
+    padding: 267px 0px 0px 0px;
+
+    &__heading{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 48px;
+        line-height: 27px;
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+
+    &__slogan{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        color: #fff;
+        font-size: 22px;
+        letter-spacing: 0.22em;
+
+        text-align: center;
+        padding-top: 19px;
+    }
+
+    &__form{
+        display: flex;
+
+        background-color: #fff;
+        padding: 2px;
+        margin: 55px auto 0px auto;
+        max-width: 648px;
+        border: 2px solid #fff;
+        transition: 0.3s ease;
+
+        &:focus-within {
+            background-color: rgb(224, 224, 224);
+            border: 2px solid #ff6363;
+            transition: 0.3s ease;
+        }
+    }
+
+    &__input{
+        flex-grow: 1;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        color: #999999;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        text-align: center;    
+    }
+
+    &__input:invalid + .header__error{
+        visibility: visible;
+    }
+
+    &__error{
+        color: #ff6363;
+        font-size: 13px;
+
+        position: relative;
+        top: 44px;
+        right: 239px;
+        visibility: hidden;
+    }
+
+    &__button{
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+
+        background-color: #5474fd;
+        padding: 19px 19px 19px 38px;
+        border: 0;
+        outline: 0;
+        transition: 0.3s ease;
+
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transition: 0.3s ease;
+        }
+
+        &:focus{
+            background-color: #ff6363;
+            transition: 0.3s ease;
+        }
+
+    }
+
+    &__search{
+        font-family: 'Aleo', serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+
+        margin-right: 20px;
+    }
+
+    &__buuttonicon{
+        width: 23px;
+        height: 23px;
+        color: #fff;
+    }
+
+    &__scrolldown{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 71px;
+        margin: 120px auto 0px auto;
+        transition: 0.3s ease;
+
+        &:hover{
+            transform: scale(1.2);
+            transition: 0.3s ease;
+            color: rgb(180, 180, 180);
+        }
+    }
+
+    &__scrolltext{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    &__scrollicon{
+        text-align: center;
+    }
+
+    &__bottombg{
+        background-color: #5474fd;
+        margin-top: 135px;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        padding: 30px 10px;
+        margin: 0 auto;
+    }
+
+    &__nav{
+
+        .header__list{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .header__list li{
+                list-style: none;
+                font-family: 'Aleo', serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+                transition: 0.3s ease;
+
+                &:not(:last-child){
+                    margin-right: 43px;
+
+                }
+                &:hover{
+                    transform: scale(1.2);
+                    transition: 0.3s ease;
+                }
+        }
+    }
+
+    #navmenu{
+        display: none;
+    }
+
+}
+
+.whychooseus{
+    background: url(../img/whychooseus/BG.png) no-repeat center top / cover;
+    padding: 120px 0px;
+
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__left{
+        max-width: 542px;
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__right{
+        flex-basis: 478px;
+
+        img:first-child{
+            align-self: flex-start;
+            margin-bottom: 5px;
+        }
+
+        img:last-child{
+            align-self: flex-end;
+        }
+    }
+
+    &__text{
+        padding-top: 61px;
+    }
+}
+
+.booking{
+    background-color: #333333;
+    padding: 16px 0px 90px 0px;
+
+    &__blocks{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__block{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        padding: 10px;
+    }
+
+    &__icons{
+        width: 58px;
+        height: 58px;
+
+        &--search{
+            color: #4f6adf;
+        }
+
+        &--check{
+            color: #f56161;
+        }
+
+        &--thumbup{
+            color: #0d85ca;
+        }
+    }
+
+    &__text{
+        font-family: 'Aleo', serif;
+        font-weight: 400;
+        font-size: 36px;
+        color: #fff;
+
+        padding-top: 35px;
+    }
+
+    &__arks{
+        display: flex;
+        position: relative;
+    }
+
+    &__duga{
+        width: 347px / 1113px * 100%;
+        height: 62px;       
+        position: relative;
+        right: -140px;
+        top: 20px;
+
+        &--right{
+            right: -230px;
+        }
+    }
+
+    &__path{
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 1px;
+        stroke-dasharray: 0.001 5;
+        fill-rule: evenodd;
+        opacity: 0.5;
+        
+    }
+}
+
+.spain{
+    background-color: rgba(45, 40, 41, 0.9);
+    max-width: 542px;
+    padding: 50px 33px 50px 30px;
+
+    &__heading{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        color: #e8e8e8;
+    }
+
+    &__slogan{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        padding-top: 30px;
+    }
+
+    &__text{
+        padding-top: 32px;
+    }
+
+    &--right{
+        margin: 0 0 0 auto;
+    }
+}
+
+.grandspain{
+    padding: 230px 0px 100px 0px;
+
+    &--first{
+        background: url(../img/grandspain/bg.png) no-repeat center top / cover;
+    }
+
+    &--second{
+        background: url(../img/grandspain/bg1.png) no-repeat center top / cover;
+    }
+}
+
+.touristssay{
+    background: url(../img/turistsay/bg.png) no-repeat center top / cover;
+    padding: 122px 0px 200px 0px;
+
+    &__block{
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       align-items: center;
+
+       margin-top: 100px;
+       background-color: #333333;
+       padding-right: 46px;
+    }
+
+    &__text{
+        max-width: 562px;
+        position: relative;
+
+        padding-top: 32px;
+    }
+
+    &__icon{
+        width: 20px;
+        height: 20px;
+        color: #5474fd;
+        transform: rotate(180deg);
+        top: -1em;
+        position: relative;
+    }
+}
+
+.footer{
+    background-color: #232323;
+    padding: 100px 0px 52px 0px;
+
+    &__text{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        color: #fff;
+
+        text-align: center;
+    }
+
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 32px;
+        margin: 0 auto;
+        max-width: 166px;
+    }
+
+    &__icon{
+        width: 16px;
+        height: 16px;
+        color: #fff;
+        
+
+        &:hover{
+            color: #5474fd;
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+    }
+}
+
+@media screen and (max-width: 1110px){
+    .touristssay{
+        &__block{
+            justify-content: center;
+            max-width: 445px;
+            padding: 10px;
+            margin: 100px auto;
+        }
+  
+    }
+
+    .booking__duga{
+        right: -13%;
+
+        &--right{
+            right: -21%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1069px){
+    .whychooseus{
+        &__block {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__right{
+            padding-top: 20px;
+        }
+
+        &__right{
+   
+            img:first-child{
+                align-self: center;
+                margin-bottom: 20px;
+            }
+    
+            img:last-child{
+                align-self: center;
+            }
+        }
+    }
+   
+    .footer{
+        padding: 9px 0px 9px 0px;
+    }
+
+}
+
+@media screen and (max-width: 917px){
+    .booking__duga{
+        right: -15%;
+
+        &--right{
+            right: -20%;
+        }
+    }
+}
+
+@media screen and (max-width: 770px){
+
+    .header{
+
+        padding: 200px 0 0 0;
+
+        .header__list{
+            flex-direction: column;
+            padding-left: 0;
+            text-align: right;
+            display: none;
+            transition: 0.3s ease;
+           
+        }
+        
+        .header__list li{
+            padding-top: 10px;
+        }
+
+        .header__list li:not(:last-child){
+            margin-right: 0;
+        }
+
+        &__menu{
+            display: flex;
+            flex-direction: column;
+    
+            max-width: 164px;
+
+            label{
+                align-self: flex-end;
+            }
+        }
+
+        &__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            align-self: flex-end;
+            margin-left: 88px;
+            transition: 0.3s ease;
+
+    
+            span{
+                content: "";
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+          }
+
+
+        &__burger:before {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 0;
+          }
+
+        &__burger:after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+          }
+        
+        &__bottom{
+            align-items: flex-start;
+            padding: 20px 10px;
+        }
+
+        &__bottombg {
+            margin-top: 58px;
+        }
+    }
+
+    .whychooseus{
+        padding: 55px 0px;
+
+        &__text{
+            padding-top: 27px;
+        }
+    }
+
+    .buttonother{
+        margin-top: 22px;
+    }
+
+    .booking{
+        padding: 0;
+
+        &__text{
+            font-size: 23px;
+        }
+        
+    }
+
+    .grandspain {
+        padding: 52px 0px 55px 0px;
+    }
+
+    .touristssay {
+        padding: 42px 0px 10px 0px;
+
+        &__block{
+            margin: 49px auto;
+        }
+    }
+
+
+
+    #navmenu:checked ~ .header__list{
+        display: block;
+        transition: 0.3s ease;
+    }
+
+ 
+}
+
+
+@media screen and (max-width: 557px){
+    .touristssay__block{
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 534px){
+    .booking{
+
+        &__duga{
+            left: 33%;
+
+            &--right{
+                display: none ;
+            }
+        }
+       
+
+        &__blocks{
+            justify-content: center;
+        }
+
+        &__block{
+            &:last-child{
+                margin-top: 30px;
+            }
+
+            &:first-child{
+                margin-right: 30px;
+            }
+        }
+       
+    }
+}
+
+@media screen and (max-width: 406px){
+    .booking{
+        &__duga{
+            display: none;
+        }
+
+        &__block{
+            padding: 20px;
+
+            &:first-child{
+                margin: 0;
+            }
+
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 402px){
+    .headingh3--center{
+        font-size: 27px;
+    }
+
+    .whychooseus__right img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .header__button{
+        padding: 9px 9px 9px 18px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .header{
+        &__heading{
+            font-size: 35px;
+        }
+
+        &__slogan{
+            font-size: 18px;
+        }
+
+        &__search{
+            font-size: 9px;
+        }
+
+        &__button{
+            padding: 4px 4px 4px 9px;
+        }
+    }
+
+    .buttonother{
+        padding: 10px 29px;
+        margin: 48px auto;
+    }
+   
+}
+
+@media screen and (max-width: 315px){
+    .header{
+        &__list li{
+            font-size: 11px;
+        }
+         
+            &:last-child{
+                padding-right: 10px;
+            }
+        
+
+
+        &__slogan{
+            font-size: 16px;
+        }
+
+        &__search{
+            font-size: 5px;
+        }
+
+        &__button{
+            padding: 2px 2px 2px 4px;
+        }
+
+        &__buuttonicon{
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+    .headingh3{
+        font-size: 27px;
+    }
+
+    .booking__text{
+        font-size: 27px;
+    }
+
+    .headingh3--center {
+        font-size: 23px;
+    }
+
+    .headingh2--paddingoff{
+        font-size: 17px;
+    }
+
+}
+
+
+
